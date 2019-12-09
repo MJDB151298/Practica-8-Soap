@@ -3,6 +3,7 @@ from zeep import Client
 client = Client('http://localhost:7777/ws/AcademicoWebService?wsdl')
 
 
+#Funciones que llaman a los servicios del cliente.
 def getEstudiantes(servicio):
     return {
         servicio: client.service.getAllEstudiante()
